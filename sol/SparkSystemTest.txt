@@ -1,0 +1,169 @@
+//tests that it goes to server
+Input 1:
+2
+
+http://thufir/Index
+
+Output 1:
+Enter URL:
+
+OK
+Welcome to the Server on thufir!
+The Forums![4]
+The Pizza Parlor![5]
+Nim[6]
+Fight in the Coliseum![7]
+Actions: [1] Back, [2] Go to URL, [3] Quit, [4-7] Page Elements
+
+//tests the back button and that forms and links work
+Input 2:
+Input 1
+
+5
+
+4
+
+small
+
+6
+
+1
+
+
+Output 2:
+Output 1
+
+OK
+Welcome to the pizza parlor!
+ What size pizza do you want? (Small, Medium, Large)
+_______[4]
+[Submit][5]
+Go Home [6]
+Actions: [1] Back, [2] Go to URL, [3] Quit, [4-6] Page Elements
+
+enter value for field size:
+
+Welcome to the pizza parlor!
+ What size pizza do you want? (Small, Medium, Large)
+__small__ [4]
+[Submit][5]
+Go Home [6]
+Actions: [1] Back, [2] Go to URL, [3] Quit, [4-6] Page Elements
+
+OK
+Welcome to the Server on thufir!
+The Forums![4]
+The Pizza Parlor![5]
+Nim[6]
+Fight in the Coliseum![7]
+Actions: [1] Back, [2] Go to URL, [3] Quit, [4-7] Page Elements
+
+Welcome to the pizza parlor!
+ What size pizza do you want? (Small, Medium, Large)
+__small__ [4]
+[Submit][5]
+Go Home [6]
+Actions: [1] Back, [2] Go to URL, [3] Quit, [4-6] Page Elements
+
+//tests the quit button
+Input 3:
+Input 1
+
+3
+
+Output 3:
+Output 1
+
+goobye!
+
+//tests invalid URL
+Input 4:
+2
+
+asdfa
+
+Output 4:
+Enter URL:
+
+Invalid URL
+Rendering Page...
+-----------------
+
+Welcome to Sparkzilla!
+
+-----------------
+Actions: [1] Back, [2] Go to URL, [3] Quit
+
+//tests unknown host
+Input 5:
+2
+
+http://host/
+
+Output 5:
+Enter URL:
+
+unknown host
+Rendering Page...
+-----------------
+
+Welcome to Sparkzilla!
+
+-----------------
+Actions: [1] Back, [2] Go to URL, [3] Quit
+
+
+//tests non existent url
+Input 6:
+2
+
+http://thufir/index
+
+
+Output 6:
+Enter URL:
+
+Server error: Invalid class name in URI - ClassNotFoundException
+Actions: [1] Back, [2] Go to URL, [3] Quit, [4-3] Page Elements
+
+//tests no input
+Input 7:
+
+
+Output 7:
+not a valid number
+Rendering Page...
+-----------------
+
+Welcome to Sparkzilla!
+
+-----------------
+Actions: [1] Back, [2] Go to URL, [3] Quit
+
+//tests non-int
+Input 8:
+fds
+
+Output 8:
+not a valid number
+Rendering Page...
+-----------------
+
+Welcome to Sparkzilla!
+
+-----------------
+Actions: [1] Back, [2] Go to URL, [3] Quit
+
+//tests in out of range
+Input 9:
+4
+
+Output 9:
+Not a valid input
+Rendering Page...
+-----------------
+
+Welcome to Sparkzilla!
+
+-----------------
+Actions: [1] Back, [2] Go to URL, [3] Quit
